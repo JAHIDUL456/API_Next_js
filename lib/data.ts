@@ -1,5 +1,4 @@
-// local database 
-
+// local database code
 type post={
     id:string,
     title:string,

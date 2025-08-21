@@ -18,9 +18,7 @@ export const GET = async (req:Request,res:Response)=>{
    
 }
 
-
 //to add the data to the database
-
 export const POST= async (req:Request, res:Response)=>{
 
     try{
@@ -32,7 +30,6 @@ export const POST= async (req:Request, res:Response)=>{
         const post=getPosts();
         return NextResponse.json(post);
 
-
     }
 
     catch(e){
@@ -40,14 +37,4 @@ export const POST= async (req:Request, res:Response)=>{
     }
 
 }
-
-
-//here is the code for the deletion of a post
-
-
-// 
-
-
-
-
 

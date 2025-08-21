@@ -2,8 +2,6 @@
 import { addPost, getById, getPosts } from "@/lib/data";
 import { NextResponse } from "next/server";
 
-
-
 // to get the data from the code
 export const GET = async (req:Request,res:Response)=>{
     try{

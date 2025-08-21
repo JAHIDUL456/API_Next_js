@@ -38,3 +38,7 @@ export const POST= async (req:Request, res:Response)=>{
 
 }
 
+//here is the code to delete the entire data
+
+
+

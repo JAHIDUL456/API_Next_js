@@ -1,7 +1,7 @@
 // local database 
 
 type post={
-    id:number,
+    id:string,
     title:string,
     des:string
 }
@@ -16,11 +16,11 @@ export const addPost=(post:post)=>{
     data.push(post);
 }
 
-export const deletePost=(id:number)=>{
+export const deletePost=(id:string)=>{
     data=data.filter((post:post)=>post.id!==id);
 }
 
 
-export const getById=(id:number)=>{
+export const getById=(id:string)=>{
     return data.find((post:post)=>post.id===id);
 }

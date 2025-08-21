@@ -1,21 +1,20 @@
-export const GET=async (req:Request,res:Response)=>{
-    return  Response.json([{
-        id:1,
-        name:"jahid",
-        message:"Hello, World"
 
-    },
-    {
-        id:2,
-        name:"jahid2",
-        message:"Hello, World2"
-    },
-    {
-        id:3,
-        name:"jahid3",
-        message:"Hello, World3"
+import { addPost, getById, getPosts } from "@/lib/data";
+import { NextResponse } from "next/server";
+
+
+export const GET=(req:Request, res:Response)=>{
+    
+
+    try{
+
+        const id = req.url.split("/").pop();
+        const post=getById(id);
+        return NextResponse.json(post);
+
+
     }
-
-]);    
-
-};
+    catch(e:any){
+        return NextResponse.json({error:e.message});
+    }
+}
